@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.wrapper {
+    margin: 0 auto;
+    display: flex;
+    list-style-type: none;
+    width: 475px;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
