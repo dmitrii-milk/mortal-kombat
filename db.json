@@ -4,78 +4,78 @@
             "name": "Sindel",
             "icon": "/char/sindel.png",
             "character_image": "char/Sindel-r.gif",
-            "id": "1"
+            "id": "0"
         },
         {
             "name": "Jax",
             "icon": "/char/jax.png",
             "character_image": "char/JAX.gif",
-            "id": "2"
+            "id": "1"
         }, {
             "name": "Cyrax",
             "icon": "/char/cyrax.png",
             "character_image": "char/Cyrax-r.gif",
-            "id": "3"
+            "id": "2"
         }, {
             "name": "Kabal",
             "icon": "char/Kabal.png",
             "character_image": "char/Kabalshakesit.gif",
-            "id": "4"
+            "id": "3"
         }, {
             "name": "Kano",
             "icon": "char/kano.png",
             "character_image": "char/Kano-r.webp",
-            "id": "5"
+            "id": "4"
         }, {
             "name": "Kung Lao",
             "icon": "char/KungLao.png",
             "character_image": "char/Kunglao_mk3.gif",
-            "id": "6"
+            "id": "5"
         }, {
             "name": "Liu Kang",
             "icon": "char/LiuKang.png",
             "character_image": "char/Liu_Kang_MK3.gif",
-            "id": "7"
+            "id": "6"
         }, {
             "name": "Night Wolf",
             "icon": "char/NigthWolf.png",
             "character_image": "char/Nightwolf-mk3-fix2.gif",
-            "id": "8"
+            "id": "7"
         }, {
             "name": "Sector",
             "icon": "char/sector.png",
             "character_image": "char/SEKTOR.gif",
-            "id": "9"
+            "id": "8"
         }, {
             "name": "Shang Tsung",
             "icon": "char/ShangTsung.png",
             "character_image": "char/ShangTsung.gif",
-            "id": "10"
+            "id": "9"
         }, {
             "name": "Sheeva",
             "icon": "char/shiva.png",
             "character_image": "char/Sheeva-2r.gif",
-            "id": "11"
+            "id": "10"
         }, {
             "name": "Smoke",
             "icon": "char/Smoke.png",
             "character_image": "char/Smoke-r.gif",
-            "id": "12"
+            "id": "11"
         }, {
             "name": "Sonya Blade",
             "icon": "char/sonya.png",
             "character_image": "char/Sonya-mk3-fix1.gif",
-            "id": "13"
+            "id": "12"
         }, {
             "name": "Stryker",
             "icon": "char/striker.png",
             "character_image": "char/Stryker-r.gif.gif",
-            "id": "14"
+            "id": "13"
         }, {
             "name": "Sub-Zero",
             "icon": "char/subzero.png",
             "character_image": "char/SUBZEROII.gif",
-            "id": "15"
+            "id": "14"
         }
     ]
 }
