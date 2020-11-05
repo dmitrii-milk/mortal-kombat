@@ -1,13 +1,11 @@
-import React, { useCallback, useEffect } from 'react';
+import React, { useCallback, useEffect, memo } from 'react';
 import { fetchCharacers, setActiveCharacter} from "./../redux/action";
 import { useDispatch, useSelector } from 'react-redux';
+
+
 import Character from './Character';
 import AutoFocus from './AutoFocus';
-import { KEY_DOWN, KEY_RIGHT, KEY_UP } from '../redux/type';
-import { KEY_LEFT } from "./../redux/type";
-
-
-const ITEMS_IN_ROW = 5;
+import { KEY_DOWN, KEY_RIGHT, KEY_UP, KEY_LEFT} from '../redux/type';
 
 
 function CharactersDesk () {
@@ -23,42 +21,35 @@ function CharactersDesk () {
     const handleSelect = useCallback(({key}) => {
 
         const {id} = selectCharacter;
-        console.log(id)
+
         switch(key) {
             case KEY_UP:
-                console.log(id - ITEMS_IN_ROW)
-                if(id - ITEMS_IN_ROW >= 0) {
-                    dispatch(setActiveCharacter(characters[+id - ITEMS_IN_ROW]))
-                }
+                dispatch(setActiveCharacter(characters[+id - 5], characters[+id + 10]))
                 break;
             case KEY_DOWN:
-                console.log(id)
-                if(id + ITEMS_IN_ROW < characters.length) {
-                    dispatch(setActiveCharacter(characters[+id + 5]))
-                }
+                dispatch(setActiveCharacter(characters[+id + 5], characters[+id - 10]))
                 break;
             case KEY_LEFT:
-                console.log(id)
-                if(+id % ITEMS_IN_ROW) {
-                    dispatch(setActiveCharacter(characters[+id - 1]))
-                }
+                dispatch(setActiveCharacter(characters[+id - 1], characters[characters.length - 1]))
                 break;
             case KEY_RIGHT:
-                console.log(id)
-                if((id + 1) % ITEMS_IN_ROW) {
-                    dispatch(setActiveCharacter(characters[+id + 1]))
-                }
+                dispatch(setActiveCharacter(characters[+id + 1], characters[0]))
                 break;
             default: break;
         }
     }, 
-    [selectCharacter, dispatch])
+    [selectCharacter, characters, dispatch])
     
     return( 
         <AutoFocus onKeyDown={handleSelect}>
-           {characters.map(char => (<Character char={char} selectCharacter={selectCharacter}  key={char.id}/>))} 
+            <div> 
+                {selectCharacter && (
+                    <img src={selectCharacter.character_image} alt={selectCharacter.name}/>
+                )}
+            </div>
+           {characters &&  characters.map(char => (<Character char={char} key={char.id}/>))} 
         </AutoFocus>
     )
 }
 
-export default CharactersDesk;
+export default memo(CharactersDesk);

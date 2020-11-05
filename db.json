@@ -69,7 +69,7 @@
         }, {
             "name": "Stryker",
             "icon": "char/striker.png",
-            "character_image": "char/Stryker-r.gif.gif",
+            "character_image": "char/Stryker-r.gif",
             "id": "13"
         }, {
             "name": "Sub-Zero",

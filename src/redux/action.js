@@ -1,6 +1,9 @@
 import { FETCH_CHARACTERS, SET_ACTIVE_CHARACTER} from "./type";
 
 
+
+
+
 export function fetchCharacers() {
    return async dispatch => {
     const response = await fetch('http://localhost:3000/characters')
@@ -11,8 +14,13 @@ export function fetchCharacers() {
 
 }
 
-export function setActiveCharacter(character) {
-   console.log(character);
+export function setActiveCharacter(character, setDefaultChar) {
+   if(!character) {
+      return {
+         type: SET_ACTIVE_CHARACTER,
+         payload: setDefaultChar
+      }
+   }
    return {
       type: SET_ACTIVE_CHARACTER,
       payload: character

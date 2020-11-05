@@ -1,9 +1,14 @@
 
 import React from 'react';
 import '../index.css';
+import { useSelector } from "react-redux";
 
 
-export default ({char, selectCharacter}) => {
+
+export default ({char}) => {
+    const selectCharacter = useSelector(state => state.focusCharacter);
+
+
     return (
         <div style={{width: "100px"}}>
            <img 
