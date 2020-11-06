@@ -12,15 +12,17 @@ function AutoFocus({children, ...rest}) {
     }, [])
     return (
         <div 
+        className="container pt-3"
         ref={container} 
         onBlur={onBlur}
         tabIndex="0"
         {...rest}
         style={{
-            width: "520px",
+            width: "560px",
             display: "flex",
             flexDirection: "row",
             flexWrap: "wrap",
+            outline: "none"
             }}>
             {children}
         </div>

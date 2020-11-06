@@ -1,5 +1,6 @@
 import React from 'react';
 import CharactersDesk from './CharactersDesk';
+import image from '../assets/background.jpg';
 
 
 
@@ -8,10 +9,12 @@ function App() {
 
 
     return (
-        <div className="container pt-3"
-            style={{       
-            display: "flex",
-            justifyContent: "center"
+        <div
+            style={{  
+            width: "100%",     
+            height: "100vh",
+            position: "relative",
+            backgroundImage: `url(${image})`
         }}> 
                  
             <CharactersDesk/>

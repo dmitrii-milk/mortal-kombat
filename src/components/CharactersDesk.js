@@ -3,8 +3,9 @@ import { fetchCharacers, setActiveCharacter} from "./../redux/action";
 import { useDispatch, useSelector } from 'react-redux';
 
 
-import Character from './Character';
+import Characters from './Characters';
 import AutoFocus from './AutoFocus';
+import ActiveCharacter from './ActiveCharacter';
 import { KEY_DOWN, KEY_RIGHT, KEY_UP, KEY_LEFT} from '../redux/type';
 
 
@@ -41,14 +42,19 @@ function CharactersDesk () {
     [selectCharacter, characters, dispatch])
     
     return( 
-        <AutoFocus onKeyDown={handleSelect}>
-            <div> 
-                {selectCharacter && (
-                    <img src={selectCharacter.character_image} alt={selectCharacter.name}/>
-                )}
-            </div>
-           {characters &&  characters.map(char => (<Character char={char} key={char.id}/>))} 
-        </AutoFocus>
+        <>
+            <h1
+            style={{
+                color:"white",
+                display: "inline-block",
+                position: "relative",
+                left: "35%"
+            }}> SELECT YOUR FIGHTER </h1>
+            <ActiveCharacter activeCharacter={selectCharacter}/>
+            <AutoFocus onKeyDown={handleSelect}>
+            {characters &&  characters.map(char => (<Characters char={char} key={char.id}/>))} 
+            </AutoFocus>
+        </>
     )
 }
 
